@@ -67,7 +67,7 @@ app.post("/contact", (req,res)=>{
   const url = "https://us21.api.mailchimp.com/3.0/lists/28c6d4c66f";
   const options = {
       method:"POST",
-      auth:"manas1:5a08cf69e5772dee623b4365e4c028e5-us21"
+      auth:process.env.API_KEY
   }
   const request = https.request(url,options,function(response){
       if(response.statusCode === 200){
